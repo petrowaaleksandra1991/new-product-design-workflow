@@ -28,7 +28,7 @@ External design and research integrations are optional. The core workflow remain
 1. Click **Use this template**, then select **Create a new repository**.
 2. Create a private repository for real product work, especially when it may contain client information, research data, or internal materials.
 3. Clone the new repository and open it as a local project in Codex.
-4. Run `powershell -ExecutionPolicy Bypass -File .\scripts\initialize-new-product.ps1` once in the project.
+4. Run `powershell -ExecutionPolicy Bypass -File .\scripts\initialize-new-product.ps1` on Windows, or `pwsh ./scripts/initialize-new-product.ps1` on macOS/Linux, once in the project.
 5. Describe the product idea, intended users, and desired outcome. Add any available research, references, business goals, or constraints.
 6. Ask Codex to start the brief. Review each stage’s result and choose whether to approve, revise, skip, or move to another stage.
 
@@ -42,7 +42,7 @@ Adjacent stages can stay in one Codex task. A fresh task is recommended after a 
 
 ## Validate the workflow
 
-Run `powershell -ExecutionPolicy Bypass -File .\scripts\validate-new-product-workflow.ps1` from this folder. The initializer modifies a project copy, so do not run it in the master workflow folder.
+Run `powershell -ExecutionPolicy Bypass -File .\scripts\validate-new-product-workflow.ps1` on Windows, or `pwsh ./scripts/validate-new-product-workflow.ps1` on macOS/Linux, from this folder. The initializer modifies a project copy, so do not run it in the master workflow folder.
 
 ## Release status
 

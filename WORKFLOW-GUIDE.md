@@ -66,9 +66,17 @@ Visual QA works without ready-made tokens: it checks internal consistency, compo
 ## Checking the workflow
 
 ```powershell
+# Windows
 powershell -ExecutionPolicy Bypass -File .\scripts\validate-new-product-workflow.ps1
+
+# macOS/Linux
+pwsh ./scripts/validate-new-product-workflow.ps1
 ```
 
 ```powershell
+# Windows
 powershell -ExecutionPolicy Bypass -File .\scripts\initialize-new-product.ps1
+
+# macOS/Linux
+pwsh ./scripts/initialize-new-product.ps1
 ```

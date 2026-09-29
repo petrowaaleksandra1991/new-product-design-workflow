@@ -21,7 +21,7 @@ If one option obviously satisfies the constraints, don't create the others "for 
 Describe in text before Figma:
 
 - principle of solution and sequence;
-- covered by `TL-ID`/`PF-ID`;
+- covered `REQ-ID`/`PF-ID` and, if architecture already exists, `FLOW-ID`;
 - inputs, states, branches, exit/recovery;
 - value for the user and business;
 - fit to the product strategy and approved visual direction, if it already exists;
