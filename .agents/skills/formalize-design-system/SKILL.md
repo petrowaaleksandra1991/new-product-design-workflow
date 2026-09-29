@@ -5,6 +5,10 @@ description: Formalizes only the selected foundations and components; Figma-writ
 
 # Formalize the selected system
 
+## Inputs and role
+
+Read `PROJECT-STATUS.md`, the user-selected entries in `COMPONENT-CANDIDATES.md`, their source screen versions, and the affected entries in `EMERGING-SYSTEM-STATUS.md`. Apply the [design-system curator profile](../../roles/design-system-curator.md).
+
 An explicit `approved-for-system` list is required. Create `DESIGN-SYSTEM-PLAN.md` with primitives/semantic roles, foundations, component contracts, variants/states, naming, accessibility, migration, governance and QA.
 
 First, propose the minimum basis required for the selected elements. Don't build a complete catalog "for the future."

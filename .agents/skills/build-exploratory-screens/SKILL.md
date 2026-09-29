@@ -5,6 +5,10 @@ description: Collects high-fidelity changeable screens according to approved UX 
 
 # Collect research screens
 
+## Inputs and role
+
+Read `PROJECT-STATUS.md`, the approved wireframe/architecture scope, `VISUAL-DIRECTION.md`, applicable assets from `REFERENCE-MANIFEST.md`, and only the relevant entries in `EMERGING-SYSTEM-STATUS.md`. Apply the [exploratory Figma builder profile](../../roles/exploratory-figma-builder.md).
+
 Before recording, fix the target, exact `SCR-ID`, states, visual direction version, write scope and rollback. Apply the provided assets according to manifest. Include `review-interface-copy` for meaningful texts and `stress-test-states` for applicable scope before the final screenshot-check.
 
 If `EMERGING-SYSTEM-STATUS.md` already contains `implemented` or `verified` elements for this scope, read only their entries and use with the specified version; candidates and local experiments do not become required components.

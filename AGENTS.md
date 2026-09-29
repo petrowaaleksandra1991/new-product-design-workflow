@@ -60,4 +60,6 @@ Read does not mean write permission. Before writing to Figma or an external serv
 
 Show a summary, the file created, significant unknowns, and one suggested next step. Update `DECISION-LOG.md` only with real user decisions. Do not create additional reports unless they are needed to verify the main artifact.
 
+After an explicit user decision, update the affected row in `PROJECT-STATUS.md` and record the input/output version links required by the artifact contract. If an approved upstream version changes, mark known dependent artifacts `stale`; when `show-project-status` discovers a mismatch not yet recorded in the table, report it and correct the status before reuse. This is agent-maintained project state governed by these rules, not a background watcher.
+
 If the solution establishes a stable fact about the product, update the affected section of `PRODUCT-CONTEXT.md`; if it changes the approved visual direction or status of a system element - `EMERGING-SYSTEM-STATUS.md`. Keep a link to the solution and version, but do not duplicate the full rationale and do not update these files after the formal approve without new content.

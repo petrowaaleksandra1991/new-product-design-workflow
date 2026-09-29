@@ -17,7 +17,15 @@ The brief and research plan now work in a fast mode: they read only the necessar
 
 There is no need to attach each `.md` to the chat: when the root folder of the project is open, Codex reads the necessary local files itself. The entire set is copied.
 
-A new chat is not required for each stage: you can sequentially approve the results in one task. For the next step, the agent first reads the status, approved decisions and short summary of the input document, then opens the details by ID. `PRODUCT-CONTEXT.md` stores only stable decisions about the product, and `EMERGING-SYSTEM-STATUS.md` - the approved direction and state of the elements of the future design system; both files are updated as the decision changes, rather than after each formal approval.
+## Continuing or starting a fresh task
+
+Adjacent stages can be completed in one task: after your decision, Codex reads the status, approved decisions and short summary of the next input, then opens details by ID. Start a fresh task after a long or source-heavy research session, when the conversation contains many discarded alternatives, or whenever you want an independent review. A review is independent only when the reviewer receives the exact version in a fresh context under the role contract.
+
+In a fresh task, first ask Codex to show project status. It should read `PROJECT-STATUS.md`, `DECISION-LOG.md`, the relevant sections of `PRODUCT-CONTEXT.md` or `EMERGING-SYSTEM-STATUS.md`, and the exact current input; it should not reconstruct the project from the old chat or reread every artifact.
+
+Status tracking is rule-governed, not background automation. Codex updates `PROJECT-STATUS.md` after explicit user decisions and checks input versions at the start of a stage or on a status request. If an approved upstream artifact changes, run the status check before continuing so dependent results are marked or reported as `stale`.
+
+`PRODUCT-CONTEXT.md` stores only stable decisions about the product, and `EMERGING-SYSTEM-STATUS.md` stores the approved direction and state of future design-system elements. Both files change when the underlying decision changes, not after every formal approval.
 
 ## What can you give at the start?
 

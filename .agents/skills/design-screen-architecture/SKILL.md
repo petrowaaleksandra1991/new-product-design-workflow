@@ -5,6 +5,10 @@ description: Designs IA, timeline, flows, screens and states; Compares concepts 
 
 # Design screen architecture
 
+## Inputs and role
+
+Apply the [information architect profile](../../roles/information-architect.md).
+
 Start with `PROJECT-STATUS.md`, the approved version of `PRD.md`, and its critical `REQ-ID` entries. Include the selected patterns and the relevant sections of `PRODUCT-CONTEXT.md` as inputs. If the user chose to skip the PRD, identify the substitute input and the risk without calling it a PRD. Open full research by a specific evidence ID only when the PRD does not support an architectural choice. Check that key inputs are not `stale` or superseded by a later user decision.
 
 If there is a meaningful choice, first compare 2-3 concepts in text: principle, main differences, pros/cons, technical issues and risks. Stop for user selection until full detail.

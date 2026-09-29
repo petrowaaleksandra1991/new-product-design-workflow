@@ -29,6 +29,7 @@ $core = @(
  'product-design\acceptance\scenarios\brief-context-regression.md',
  'product-design\acceptance\scenarios\wireframe-board-copy-states.md',
  'product-design\acceptance\scenarios\fast-early-stages.md',
+ 'product-design\acceptance\scenarios\routing-skip-resume.md',
  'product-design\acceptance\RELEASE-REPORT.md',
  '.agents\skills\prepare-brief\references\deep-brief-checks.md',
  '.agents\skills\plan-research\references\deep-research-planning.md',
@@ -90,6 +91,27 @@ if(Test-Path -LiteralPath $releaseReportPath){
 
 $roles=@('ROLE-CONTRACT.md','research-author.md','research-reviewer.md','pattern-analyst.md','pattern-reviewer.md','information-architect.md','wireframe-builder.md','wireframe-reviewer.md','visual-reference-analyst.md','exploratory-figma-builder.md','design-system-curator.md','visual-reviewer.md')
 foreach($f in $roles){ Require-File ".agents\roles\$f" }
+$roleBindings=[ordered]@{
+    'run-research'='research-author.md'
+    'review-research'='research-reviewer.md'
+    'analyze-patterns'='pattern-analyst.md'
+    'design-screen-architecture'='information-architect.md'
+    'build-wireframes'='wireframe-builder.md'
+    'review-wireframes'='wireframe-reviewer.md'
+    'analyze-visual-references'='visual-reference-analyst.md'
+    'build-exploratory-screens'='exploratory-figma-builder.md'
+    'formalize-design-system'='design-system-curator.md'
+    'review-patterns'='pattern-reviewer.md'
+    'review-visuals'='visual-reviewer.md'
+}
+foreach($stage in $roleBindings.Keys){
+    $skillFile=Join-Path $skillRoot "$stage\SKILL.md"
+    if(Test-Path -LiteralPath $skillFile){
+        $skillContent=Get-Content -LiteralPath $skillFile -Raw -Encoding UTF8
+        $requiredRoleLink="../../roles/$($roleBindings[$stage])"
+        if(-not $skillContent.Contains($requiredRoleLink)){ $errors.Add("Stage role not connected: $stage -> $($roleBindings[$stage])") }
+    }
+}
 $obsoleteNested = Join-Path $root '.agents\.agents'
 if(Test-Path -LiteralPath $obsoleteNested){
     $obsoleteFiles = @(Get-ChildItem -LiteralPath $obsoleteNested -Recurse -File -Force)
@@ -100,7 +122,11 @@ foreach($f in $boardAssets){ Require-File $f }
 $templates=@('PROJECT-STATUS.template.md','INPUTS.template.md','REFERENCE-MANIFEST.template.md','SOURCE-MANIFEST.template.md','SOURCE-REGISTER.template.md','PRODUCT-CONTEXT.template.md','DECISION-LOG.template.md','DATA-EGRESS-LOG.template.md','EMERGING-SYSTEM-STATUS.template.md')
 foreach($f in $templates){ Require-File "product-design\templates\$f" }
 
-$nonTemplates=Get-ChildItem -LiteralPath $root -Recurse -Force -File | Where-Object { $_.FullName -notmatch '\\templates\\' -and $_.Extension -in @('.md','.yaml','.yml') }
+$templatePathPattern='[\\/]templates[\\/]'
+foreach($samplePath in @('C:\workflow\templates\sample.md','/workflow/templates/sample.md')){
+    if($samplePath -notmatch $templatePathPattern){ $errors.Add("Template-path filter is not cross-platform: $samplePath") }
+}
+$nonTemplates=Get-ChildItem -LiteralPath $root -Recurse -Force -File | Where-Object { $_.FullName -notmatch $templatePathPattern -and $_.Extension -in @('.md','.yaml','.yml') }
 foreach($file in $nonTemplates){
     $content=Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
     if($content -match '\b(TODO|TBD)\b|lorem ipsum'){ $errors.Add("Unfinished placeholder: $($file.FullName.Substring($root.Length+1))") }

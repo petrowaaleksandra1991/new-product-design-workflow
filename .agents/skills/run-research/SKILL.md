@@ -10,6 +10,10 @@ metadata:
 
 # Do research
 
+## Inputs and role
+
+Read `PROJECT-STATUS.md`, the approved `RESEARCH-PLAN.md`, and only the registered sources needed by that plan. Apply the [research author profile](../../roles/research-author.md). Open broader context or additional sources only when a plan question requires them; do not inherit unapproved conclusions from an earlier task.
+
 Execute the approved `RESEARCH-PLAN.md` as completely as real sources, permissions and tools allow. Create one main `RESEARCH.md`; appendices and raw tables are acceptable only as verifiable supporting materials.
 
 Before synthesizing, be sure to read [RESEARCH.md content standard](references/research-deliverable-standard.md). It sets the quality and logic of the document, but does not require the same headings for different products.

@@ -5,6 +5,10 @@ description: Collects low-fidelity wireframes according to the approved architec
 
 # Collect wireframes
 
+## Inputs and role
+
+Read `PROJECT-STATUS.md`, the approved `SCREEN-ARCHITECTURE.md`, its referenced `REQ-ID`/`FLOW-ID`/`SCR-ID` entries, and applicable user decisions. Apply the [wireframe builder profile](../../roles/wireframe-builder.md). Open earlier evidence only by a specific unresolved ID.
+
 Create a low-fidelity representation of the approved architecture and one `WIREFRAMES.md`. The stage checks the structure to the visual direction and settles on the user's decision.
 
 ## Before assembly

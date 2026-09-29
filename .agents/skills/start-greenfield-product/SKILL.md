@@ -5,6 +5,10 @@ description: Initializes a copy of NEW-PRODUCT: creates state, context and manif
 
 # Start a new product
 
+## Inputs
+
+Read the user's product idea or request and only the files, links, providers, and constraints they explicitly declare. If this copy already contains `INPUTS.md`, `PROJECT-STATUS.md`, or manifests, inspect them before creating anything; do not scan the repository for undeclared material.
+
 Check that this is a copy of greenfield-kit and that the system contracts are intact. Collect the product ID from the user's name or suggest a secure short name.
 
 Create system files using `STARTER-CONTRACT.md` without overwriting existing ones. Register available local files, links and providers only as declared inputs; Don't scan them en masse. For references, specify the purpose and weight only when it affects the next stage.

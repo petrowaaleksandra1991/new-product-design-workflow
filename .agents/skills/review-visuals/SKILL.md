@@ -5,6 +5,8 @@ description: Independently checks the visual based on references, UI theory and 
 
 # Check visual
 
+## Inputs and role
+
 Before review, apply [independence contract](../../roles/ROLE-CONTRACT.md) and [visual reviewer profile](../../roles/visual-reviewer.md). Convey the exact version of the screens, visual decisions made, and applicable UX inputs; The author's self-assessment does not replace inspection of the layouts.
 
 Create `VISUAL-QA.md` for the exact version of the nodes. First, determine the real basis of the review: required assets, reference decisions, visual direction, user edits and already approved foundations/components. Don't ask for missing tokens.

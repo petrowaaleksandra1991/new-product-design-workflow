@@ -10,6 +10,8 @@ metadata:
 
 # Check the study independently
 
+## Inputs and role
+
 Before review, apply [independence contract](../../roles/ROLE-CONTRACT.md) and [research reviewer profile](../../roles/research-reviewer.md). The main agent transmits the exact version of `RESEARCH.md`, its plan and sources; reviewer does not receive the author's self-assessment as proof of quality.
 
 Work as a read-only reviewer of the exact version of `RESEARCH.md`. The author of the version being reviewed cannot pass off the self-test as an independent review. Create `RESEARCH-REVIEW.md`, but do not edit the original document.

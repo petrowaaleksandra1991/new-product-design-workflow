@@ -63,6 +63,8 @@ Complete selection and fallback rules are in `PROVIDER-ROUTING.md`.
 
 Only the user converts the main product artifact to `approved`, `approved-with-risks` or `skipped`. Technical success of a recording does not equal product approval.
 
+`PROJECT-STATUS.md` is maintained by the agent after explicit decisions and audited when a stage starts or `show-project-status` is requested. There is no background file watcher or automatic event propagation. If an approved upstream version changes, the agent marks known dependent artifacts `stale`; if the table has not yet been updated, the status check must still report the version mismatch before the result is reused.
+
 ## Versions
 
 Do not rewrite a significant approved decision without leaving a trace. Create a new version or write a change to `DECISION-LOG.md`, indicating the affected downstream artifacts.
@@ -74,6 +76,8 @@ Do not rewrite a significant approved decision without leaving a trace. Create a
 - Update `product-design/context/PRODUCT-CONTEXT.md` when the user approves or changes a durable decision about users, use context, value, business model, platform, constraints, or terminology. Keep a link to the `DEC-ID` and the source artifact version. Do not copy the entire brief or research into it, and do not record an open hypothesis as fact.
 - `product-design/design-system/EMERGING-SYSTEM-STATUS.md` update only after deciding on the visual direction, the status of a candidate for the system or the actual creation/verification of the foundation or component. The `exploratory` element does not automatically become a system element. Provide `SYS-ID`, solution and tested version where they exist.
 - At the next stage, read only the sections of these notes that are relevant to the task. If the entry is missing or still contains `unknown`/`none`, do not rescan it and do not replace the approved artifact with it.
+
+Adjacent stages may remain in one task. Start a fresh task after a source-heavy or noisy session and for every independent review. The fresh task begins with `show-project-status`, then reads the relevant decision-log entries, durable context, exact input version and targeted IDs; it does not rely on the previous chat as the source of truth.
 
 ## Automatic routing
 

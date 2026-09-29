@@ -5,6 +5,8 @@ description: Independently checks the flow, content, states and availability of 
 
 # Check wireframes
 
+## Inputs and role
+
 Before review, apply [independence contract](../../roles/ROLE-CONTRACT.md) and [wireframe reviewer profile](../../roles/wireframe-reviewer.md). Provide the reviewer with the exact version of frames, `WIREFRAMES.md`, PRD, architecture and user decisions; do not convey the author's self-esteem instead of evidence.
 
 Work read-only for the exact version. Check each `FLOW-ID`, `SCR-ID`, branch and state against the PRD and architecture. Check whether the continuous chain from input to result is readable, whether the main and next action, hierarchy of content, forms/errors, interruption/recovery, time changes, permissions and invisible business rules are clear.

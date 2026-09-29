@@ -19,3 +19,4 @@ The release candidate is checked against the structure, routing and scripts belo
 15. Patterns → PRD → architecture start with approved results and reveal detailed evidence by ID, maintaining review restrictions.
 16. `PRODUCT-CONTEXT.md` changes only after a stable product decision, and `EMERGING-SYSTEM-STATUS.md` - after a decision on the direction or system element; hypothesis and `candidate` do not automatically become standard.
 17. The Windows PowerShell validator counts discovery characters from UTF-8 text, and not from erroneously decoded Cyrillic.
+18. Every role profile is connected to an applicable stage; a fresh task can resume from compact files, and stale inputs are detected during a stage/status audit without claiming a background watcher.

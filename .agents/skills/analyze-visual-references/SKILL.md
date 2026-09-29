@@ -5,6 +5,10 @@ description: Decomposes visual references and assets and creates VISUAL-REFERENC
 
 # Analyze visual references
 
+## Inputs and role
+
+Read `PROJECT-STATUS.md`, `REFERENCE-MANIFEST.md`, the registered reference files, and the approved UX scope that the visual direction must support. Apply the [visual reference analyst profile](../../roles/visual-reference-analyst.md). Do not scan unregistered assets or treat an earlier moodboard as an approval.
+
 First check `REFERENCE-MANIFEST.md`: purpose, weight and right of use. Don't mix logical-reference with visual-reference and don't treat moodboard as an exact specification.
 
 For each applicable `REF-ID`, describe the transferable principles, non-transferable brand details, inconsistencies, accessibility, connection to UX, and degree of confidence. Compare the references with each other and with the required assets.

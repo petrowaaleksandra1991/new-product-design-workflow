@@ -13,6 +13,9 @@ This release candidate provides a complete staged workflow with 38 active skills
 - `PRODUCT-CONTEXT.md` and `EMERGING-SYSTEM-STATUS.md` record durable decisions; a formal approval or temporary visual experiment alone does not create a new entry.
 - Research consolidates large sets of sources into verifiable cards instead of transferring raw dumps to the final document.
 - Windows PowerShell validator reads UTF-8 explicitly. The current inventory and discovery snapshot is recorded once in **Release scope** above; discovery is a character count, not a token measurement.
+- Template exclusion in the validator accepts both Windows and POSIX path separators, and its self-check covers both path forms.
+- All eleven role profiles are now connected to their applicable stage skills. Stage inputs and compact handoff rules are explicit where earlier files relied on implication.
+- Project status is described as agent-maintained state audited at stage boundaries or on request, not as a background watcher. Fresh tasks are recommended after source-heavy sessions and required for independent review.
 - Mandatory stages and providers have not been changed; a live pilot has not yet been conducted to evaluate speed and quality.
 
 ## History of rc.3

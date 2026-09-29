@@ -34,6 +34,12 @@ External design and research integrations are optional. The core workflow remain
 
 See [WORKFLOW-GUIDE.md](WORKFLOW-GUIDE.md) for the full workflow. The root [AGENTS.md](AGENTS.md) contains the operating rules that Codex reads in the project.
 
+## Status and context handoff
+
+Progress is recorded in `PROJECT-STATUS.md` and governed by the workflow rules; it is not a background watcher or event-driven automation. Codex updates the status after explicit user decisions and checks input versions when a stage begins or when `show-project-status` is requested. If an approved upstream artifact changes, dependent results must be marked or reported as `stale` before they are reused.
+
+Adjacent stages can stay in one Codex task. A fresh task is recommended after a long or source-heavy research session and is required for a genuinely independent review. The fresh task starts from project status, the decision log, the relevant durable context, and the exact current input version rather than replaying the whole conversation.
+
 ## Validate the workflow
 
 Run `powershell -ExecutionPolicy Bypass -File .\scripts\validate-new-product-workflow.ps1` from this folder. The initializer modifies a project copy, so do not run it in the master workflow folder.
