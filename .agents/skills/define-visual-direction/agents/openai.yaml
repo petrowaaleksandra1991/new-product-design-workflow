@@ -1,0 +1,6 @@
+interface:
+  display_name: "Define Visual Direction"
+  short_description: "Prepares first screen rules"
+  default_prompt: "Use $define-visual-direction to prepare and approve visual direction."
+policy:
+  allow_implicit_invocation: true

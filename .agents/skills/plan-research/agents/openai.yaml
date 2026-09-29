@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan Study"
+  short_description: "Links decisions, questions, methods and evidence"
+  default_prompt: "Use $plan-research to prepare a research plan for a new product."
+policy:
+  allow_implicit_invocation: true

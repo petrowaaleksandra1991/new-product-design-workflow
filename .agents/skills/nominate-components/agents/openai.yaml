@@ -1,0 +1,6 @@
+interface:
+  display_name: "Suggest Components"
+  short_description: "Finds candidates without automatic implementation"
+  default_prompt: "Use $nominate-components to prepare a list of candidates for the user."
+policy:
+  allow_implicit_invocation: true

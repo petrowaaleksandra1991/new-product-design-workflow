@@ -1,0 +1,6 @@
+interface:
+  display_name: "Check wireframes"
+  short_description: "Independently tests UX of low-fi versions"
+  default_prompt: "Use $review-wireframes to read-only check the exact version of wireframes."
+policy:
+  allow_implicit_invocation: true

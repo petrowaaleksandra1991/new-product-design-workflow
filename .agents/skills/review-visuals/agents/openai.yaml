@@ -1,0 +1,6 @@
+interface:
+  display_name: "Check Visual Quality"
+  short_description: "Verifies Figma through an independent screen loop"
+  default_prompt: "Use $review-visuals to independently review the visuals of your assembled screens."
+policy:
+  allow_implicit_invocation: true

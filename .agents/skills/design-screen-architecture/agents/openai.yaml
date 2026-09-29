@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design flow and screens"
+  short_description: "Compares concepts and builds screen architectures"
+  default_prompt: "Use $design-screen-architecture to design the IA, flow, and screens for the new product."
+policy:
+  allow_implicit_invocation: true

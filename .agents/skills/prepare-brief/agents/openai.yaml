@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prepare Brief"
+  short_description: "Formulates the problem, outcomes, scope and metrics"
+  default_prompt: "Use $prepare-brief to prepare a new product brief for approval."
+policy:
+  allow_implicit_invocation: true

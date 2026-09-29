@@ -1,0 +1,6 @@
+interface:
+  display_name: "Parse visual references"
+  short_description: "Decomposes the style and purpose of materials"
+  default_prompt: "Use $analyze-visual-references to analyze registered references."
+policy:
+  allow_implicit_invocation: true

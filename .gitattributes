@@ -1,0 +1,10 @@
+# Keep text line endings stable across platforms.
+* text=auto eol=lf
+
+# Treat common media and document formats as binary.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary

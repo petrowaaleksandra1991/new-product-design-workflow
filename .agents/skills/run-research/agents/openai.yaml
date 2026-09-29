@@ -1,0 +1,6 @@
+interface:
+  display_name: "Do Research"
+  short_description: "Collects evidence and forms research conclusions"
+  default_prompt: "Use $run-research to execute an approved product research plan."
+policy:
+  allow_implicit_invocation: true

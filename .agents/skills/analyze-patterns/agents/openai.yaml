@@ -1,0 +1,6 @@
+interface:
+  display_name: "Analyze UX Patterns"
+  short_description: "Compares solution models, evidence and applicability"
+  default_prompt: "Use $analyze-patterns to compare UX patterns for a new product."
+policy:
+  allow_implicit_invocation: true

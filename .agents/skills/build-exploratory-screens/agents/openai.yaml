@@ -1,0 +1,6 @@
+interface:
+  display_name: "Collect first screens"
+  short_description: "Creates customizable high-fi solutions"
+  default_prompt: "Use $build-exploratory-screens to build the approved exploratory scope."
+policy:
+  allow_implicit_invocation: true

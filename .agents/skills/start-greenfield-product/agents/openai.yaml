@@ -1,0 +1,6 @@
+interface:
+  display_name: "Start New Product"
+  short_description: "Creates state and connects inputs"
+  default_prompt: "Use $start-greenfield-product to safely initialize a new idea."
+policy:
+  allow_implicit_invocation: true

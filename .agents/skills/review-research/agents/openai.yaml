@@ -1,0 +1,6 @@
+interface:
+  display_name: "Independently review the study"
+  short_description: "Checks evidence, conclusions and readiness of solutions"
+  default_prompt: "Use $review-research to independently review the current version of a product's research."
+policy:
+  allow_implicit_invocation: true

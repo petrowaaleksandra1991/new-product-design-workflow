@@ -1,0 +1,6 @@
+interface:
+  display_name: "Check UX Scenario"
+  short_description: "Checks behavior, states, and recovery"
+  default_prompt: "Use $review-patterns to independently test the UX of your assembled screens."
+policy:
+  allow_implicit_invocation: true

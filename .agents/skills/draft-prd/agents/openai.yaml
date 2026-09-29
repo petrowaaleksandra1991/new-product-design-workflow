@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prepare PRD"
+  short_description: "Links problem, requirements, outcomes, and metrics"
+  default_prompt: "Use $draft-prd to prepare a new product PRD for approval."
+policy:
+  allow_implicit_invocation: true

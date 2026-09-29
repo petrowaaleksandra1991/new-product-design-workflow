@@ -1,0 +1,6 @@
+interface:
+  display_name: "Formalize the system"
+  short_description: "Creates only approved foundations and components"
+  default_prompt: "Use $formalize-design-system only for the user-selected scope."
+policy:
+  allow_implicit_invocation: true

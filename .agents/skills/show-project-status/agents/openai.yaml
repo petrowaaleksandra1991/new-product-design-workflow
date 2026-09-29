@@ -1,0 +1,6 @@
+interface:
+  display_name: "Display project status"
+  short_description: "Shows milestones, metrics, risks and next step"
+  default_prompt: "Use $show-project-status to show the current status of the product."
+policy:
+  allow_implicit_invocation: true
