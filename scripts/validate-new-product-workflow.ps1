@@ -29,6 +29,7 @@ $core = @(
  'product-design\acceptance\scenarios\brief-context-regression.md',
  'product-design\acceptance\scenarios\wireframe-board-copy-states.md',
  'product-design\acceptance\scenarios\fast-early-stages.md',
+ 'product-design\acceptance\RELEASE-REPORT.md',
  '.agents\skills\prepare-brief\references\deep-brief-checks.md',
  '.agents\skills\plan-research\references\deep-research-planning.md',
  'scripts\initialize-new-product.ps1'
@@ -74,6 +75,18 @@ foreach($name in $actual){ if($expected -notcontains $name){ $errors.Add("Unregi
 $inactive=@(Get-ChildItem -LiteralPath $skillRoot -Directory | Where-Object { -not (Test-Path -LiteralPath (Join-Path $_.FullName 'SKILL.md')) } | Select-Object -ExpandProperty Name)
 foreach($name in $inactive){ $errors.Add("Skill folder without SKILL.md: $name") }
 if($discovery -gt 8000){ $errors.Add("Skill discovery budget exceeded: $discovery/8000") }
+
+$releaseReportPath = Join-Path $root 'product-design\acceptance\RELEASE-REPORT.md'
+if(Test-Path -LiteralPath $releaseReportPath){
+    $releaseReport = (Get-Content -LiteralPath $releaseReportPath -Raw -Encoding UTF8).Replace('`','')
+    $expectedInventorySnapshot = "$($actual.Count)/$($expected.Count) active skills"
+    $expectedDiscoverySnapshot = "$discovery/8000 discovery characters"
+    if(-not $releaseReport.Contains($expectedInventorySnapshot)){ $errors.Add("Release report missing current skill snapshot: $expectedInventorySnapshot") }
+    if(-not $releaseReport.Contains($expectedDiscoverySnapshot)){ $errors.Add("Release report missing current discovery snapshot: $expectedDiscoverySnapshot") }
+    foreach($match in [regex]::Matches($releaseReport, '\b\d+/8000 discovery characters\b')){
+        if($match.Value -ne $expectedDiscoverySnapshot){ $errors.Add("Release report contains stale discovery snapshot: $($match.Value)") }
+    }
+}
 
 $roles=@('ROLE-CONTRACT.md','research-author.md','research-reviewer.md','pattern-analyst.md','pattern-reviewer.md','information-architect.md','wireframe-builder.md','wireframe-reviewer.md','visual-reference-analyst.md','exploratory-figma-builder.md','design-system-curator.md','visual-reviewer.md')
 foreach($f in $roles){ Require-File ".agents\roles\$f" }

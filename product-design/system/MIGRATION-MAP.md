@@ -1,6 +1,16 @@
 # Adaptation map: existing-product workflow → greenfield workflow
 
-The original set contained 31 active skills and was not changed when the greenfield workflow was released. During the initial migration, the greenfield workflow contained 36 skills; this is a historical number, not the composition of the current workflow. The current composition is determined by `scripts/validate-new-product-workflow.ps1` (38 active skills in version 1.3.0-rc.4).
+The original set contained 31 active skills and was not changed when the greenfield workflow was released. The greenfield workflow started with 36 active skills. By the reviewed rc.2 archive, three cross-stage methods had raised that snapshot to 39. The current composition is 38 active skills in version 1.3.0-rc.4 and is enforced by `scripts/validate-new-product-workflow.ps1`.
+
+## Composition history
+
+| Snapshot | Change from the previous snapshot | Active skills |
+|---|---|---:|
+| Initial greenfield migration | 21 reused or adapted skills plus 15 additions | 36 |
+| Reviewed rc.2 archive | added `render-wireframe-board`, `review-interface-copy`, and `stress-test-states` | 39 |
+| Current rc.4 | merged `interpret-visual-references` and `detect-reusable-candidates` into their stage skills; added `synthesize-usability-results` | 38 |
+
+The rc.2 release itself did not introduce new active skills; the three cross-stage methods were already present in the reviewed rc.2 archive. The current count follows `36 + 3 - 2 + 1 = 38`.
 
 ## Reused without changing the main responsibility - 8
 
@@ -27,8 +37,8 @@ Main changes: product scope instead of feature scope; external patterns instead 
 | `map-figma-to-code` | turns on later when the code appears; not part of the starter workflow |
 | `derive-design-playbook` | replaced by reference analysis, UI theory and visual direction |
 
-## Added - 15
+## Initial migration additions - 15
 
 Stages: `start-greenfield-product`, `build-wireframes`, `review-wireframes`, `analyze-visual-references`, `define-visual-direction`, `build-exploratory-screens`, `nominate-components`, `formalize-design-system`.
 
-Initial migration methods: `map-information-architecture`, `plan-usability-validation`, `interpret-visual-references`, `inventory-supplied-assets`, `evaluate-ui-quality`, `detect-reusable-candidates`, `trace-ux-to-ui`. Later, `interpret-visual-references` and `detect-reusable-candidates` were combined with the corresponding stage skills; after testing, a conditional method `synthesize-usability-results` was added.
+Initial migration methods: `map-information-architecture`, `plan-usability-validation`, `interpret-visual-references`, `inventory-supplied-assets`, `evaluate-ui-quality`, `detect-reusable-candidates`, `trace-ux-to-ui`.
